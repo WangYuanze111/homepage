@@ -1,0 +1,102 @@
+/* 引入 Google Fonts 的思源黑体（Noto Sans SC） */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+
+/* 全局字体与背景设置 */
+body {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 18px; /* 稍微放大一点点 */
+  line-height: 1.8;
+  margin: 0;
+  padding: 2rem 0;
+  background: linear-gradient(to bottom, #fffdf5, #f9f3e9);
+  color: #222;
+}
+
+/* 主内容容器 */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #fffef8;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* 大标题居中，使用楷体增强传统感 */
+h1, h2 {
+  font-family: "KaiTi", "楷体", "STKaiti", serif;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #5a3e1b;
+  margin-bottom: 1rem;
+  border-bottom: 2px dashed #d8cbb0;
+  padding-bottom: 0.5rem;
+}
+
+/* 小标题左对齐，仍用楷体 */
+h3 {
+  font-family: "KaiTi", "楷体", "STKaiti", serif;
+  font-size: 1.6rem;
+  color: #7a4c1e;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* 段落左对齐，使用现代无衬线字体 */
+p {
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+/* 列表左对齐 */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* 图片左对齐并贴边 */
+img {
+  display: block;
+  max-width: 100%;
+  margin: 1rem 0;
+  border: 1px solid #aaa;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+/* 视频左对齐并贴边 */
+iframe {
+  display: block;
+  margin: 1rem 0;
+  border: 1px solid #aaa;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 链接样式 */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 页脚居中 */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 4rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
