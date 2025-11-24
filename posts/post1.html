@@ -4,6 +4,19 @@
   <meta charset="UTF-8">
   <title>使用楷体打造传统风格网页</title>
   <link rel="stylesheet" href="../style.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(','\\)']],
+        displayMath: [['\\[','\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
   <main>
@@ -19,6 +32,12 @@
       <li>视觉风格传统，适合文化类或学术类项目</li>
       <li>系统自带，无需额外加载字体文件</li>
     </ul>
+    <p>这是一个行内公式：( E = mc^2 )</p>
+    <p>这是一个块级公式：</p>
+    \( E = mc^2 \)
+    \[ E = mc^2 \]
+
+
 
     <h3>🧱 如何在 HTML 中使用楷体</h3>
     <p>只需在 CSS 中设置如下字体族：</p>

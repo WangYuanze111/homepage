@@ -4,6 +4,18 @@
   <meta charset="UTF-8">
   <title>HTML 功能示例</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(','\\)']],
+        displayMath: [['\\[','\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -23,7 +35,91 @@
   <li>2</li>
   <li>3</li>
   </ul>
+  <img src="profile.jpg" alt="图片名称">
+  <h2>#概率论 #信息论 #编码原理</h2>
+  <hr>
+  <h2>预备知识</h2>
+  <h3>符号约定</h3>
+  <ul>
+  <li>大写字母\(X , Y , Z\) 等表示随机变量</li>
+  <li>小写字母\(x_i , y_j,x_1,x_n,y_m\)表示随机变量的具体取值，即为随机事件。</li>
+  </ul>
+  <h3>概率空间</h3>
+  <p>离散随机变量\(X\)的概率空间为：
+  \[
+  \begin{bmatrix} X\P(X)\end{bmatrix} = \begin{bmatrix} x_1 &amp;x_2  &amp; \cdots  &amp; x_n\ y_1 &amp;y_2  &amp; \cdots  &amp; y_m\end{bmatrix},\ 
+  \sum_{i=1}^np(x_i) = 1
+  \]</p>
+  <p>\[
+  \begin{array}{l}
+  P_{X}=\left[\begin{array}{llll}
+  p\left(x_{1}\right) &amp; p\left(x_{2}\right) &amp; \cdots &amp; p\left(x_{n}\right)
+  \end{array}\right] \
+  =\left[\begin{array}{lllll}
+  p_{x_{1}} &amp; p_{x_{2}} &amp; \cdots &amp; p_{x_{n}}
+  \end{array}\right]=\left[\begin{array}{llll}
+  p_{1} &amp; p_{2} &amp; \cdots &amp; p_{n}
+  \end{array}\right]
+  \end{array}
+  \]</p>
+  <p>离散随机变量$Y$的概率空间为：
+  n替换为m即可，和X相同</p>
+  <h3>离散随机变量的联合概率空间</h3>
+  <p>$$
+  P_{X Y}=\begin{array}{c}
+  x_{1} \
+  x_{2} \
+  \vdots \
+  x_{n}
+  \end{array}\left[\begin{array}{cccc}
+  p\left(x_{1} y_{1}\right) &amp; p\left(x_{1} y_{2}\right) &amp; \cdots &amp; p\left(x_{1} y_{m}\right) \
+  p\left(x_{2} y_{1}\right) &amp; p\left(x_{2} y_{2}\right) &amp; \cdots &amp; p\left(x_{2} y_{m}\right) \
+  \vdots &amp; \vdots &amp; \vdots &amp; \vdots \
+  p\left(x_{n} y_{1}\right) &amp; p\left(x_{n} y_{2}\right) &amp; \cdots &amp; p\left(x_{n} y_{m}\right)
+  \end{array}\right]
+  $$</p>
+  <h3>全概率公式</h3>
+  <p>$$
+  p\left(y_{j}\right)=\sum_{i=1}^{n} p\left(x_{i}\right) p\left(y_{j} \mid x_{i}\right)=\sum_{i=1}^{n} p\left(x_{i} y_{j}\right)
+  $$</p>
+  <h3>贝叶斯公式</h3>
+  <p>$$
+  p\left(x_{i} \mid y_{j}\right)=\frac{p\left(x_{i} y_{j}\right)}{p\left(y_{j}\right)}=\frac{p\left(x_{i}\right) p\left(y_{j} \mid x_{i}\right)}{\sum_{i=1}^{n} p\left(x_{i}\right) p\left(y_{j} \mid x_{i}\right)}
+  $$</p>
+  <h3>其他常用的关系</h3>
+  <h4>条件概率</h4>
+  <p>$$
+  \sum_{j=1}^{m} p\left(y_{j} \mid x_{i}\right)=1
+  $$
+  $$</p>
+  <p>P_{Y|X}=
+  \begin{array}{c}
+  x_1\
+  x_2\
+  \vdots\
+  x_n
+  \end{array}
+  \begin{bmatrix}
+  p(y_1|x_1) &amp; p(y_2|x_1) &amp; \cdots &amp; p(y_m|x_1)\
+  p(y_1|x_2) &amp; p(y_2|x_2) &amp; \cdots &amp; p(y_m|x_2)\
+  \vdots &amp; \vdots &amp; \vdots &amp; \vdots\
+  p(y_1|x_n) &amp; p(y_2|x_n) &amp; \cdots &amp; p(y_m|x_n)
+  \end{bmatrix}
+  $$</p>
+  <p>wwwww</p>
+  
+  <ul>
+  <li>条件概率矩阵的条件变量为行输入</li>
+  <li>任一行内的所有条件都一样</li>
+  <li>每一行的概率和都为1
+  ![[Pasted image 20250228121617.png]]</li>
+  </ul>
+  <pre><code class="hljs">title:特别注意
+  ![[Pasted image 20250228121706.png]]
+  </code></pre>
 
 
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt"><mtr><mtd><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">(</mo><mtable columnalign="center" columnspacing="1em" rowspacing="4pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo data-mjx-texclass="CLOSE">)</mo></mrow></mtd></mtr><mtr><mtd><mtext>tan</mtext><mfrac><mi>α</mi><mn>2</mn></mfrac></mtd><mtd><mi></mi><mo>=</mo><mfrac><mrow><mtext>sin</mtext><mi>α</mi></mrow><mrow><mn>1</mn><mo>+</mo><mtext>cos</mtext><mi>α</mi></mrow></mfrac></mtd></mtr></mtable><munderover><mo data-mjx-texclass="OP">∭</mo><mrow></mrow><mrow></mrow></munderover></math>
+  
 </body>
 </html>
